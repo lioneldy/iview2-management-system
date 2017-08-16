@@ -8,7 +8,7 @@
         <p> 已有账号，请&nbsp;<a href="/login">登&nbsp;录</a></p>
 
         <div class="alert alert-danger display-hide">
-            <button class="close" data-close="alert"></button>
+            <Button class="close" data-close="alert"></Button>
             <span>信息有误，请核对！</span>
         </div>
 
