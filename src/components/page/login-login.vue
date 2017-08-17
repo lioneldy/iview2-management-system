@@ -5,35 +5,32 @@ h1 {
 </style>
 
 <template>
-<i-form ref="formInline" :model="formInline" :rules="ruleInline">
-    <Form-item>
-        <h1 class="form-title">账户登录</h1>
-    </Form-item>
-    <Form-item prop="user">
-        <Input v-model="formInline.user" placeholder="请输入用户名称">
-            <Icon type="ios-person-outline" slot="prepend"></Icon>
-        </Input>
-    </Form-item>
-    <Form-item prop="password">
-        <Input v-model="formInline.password" placeholder="请输入密码">
-            <Icon type="ios-locked-outline" slot="prepend"></Icon>
-        </Input>
-    </Form-item>
-    <Form-item style = "text-align:right">
-        <i-button type="primary" @click.native="handleSubmit('formInline')">登录</i-button>
-    </Form-item>
-    <hr>
-    <div class="create-account" style="height: 40px;">
-        <router-link to="register" style="float: left;">注册账号 </router-link>
-        <router-link to="foget" style="float: right;">找回密码 </router-link>
-    </div>
-</i-form>
-
-
+    <i-form ref="formInline" :model="formInline" :rules="ruleInline">
+        <Form-item>
+            <h1 class="form-title">账户登录</h1>
+        </Form-item>
+        <Form-item prop="user">
+            <Input type="text" v-model="formInline.user" placeholder="请输入用户名称">
+                <Icon type="ios-person-outline" slot="prepend"></Icon>
+            </Input>
+        </Form-item>
+        <Form-item prop="password">
+            <Input type="password" v-model="formInline.password" placeholder="请输入密码">
+                <Icon type="ios-locked-outline" slot="prepend"></Icon>
+            </Input>
+        </Form-item>
+        <Form-item style = "text-align:right">
+            <i-button type="primary" @click="handleSubmit('formInline')">登录</i-button>
+        </Form-item>
+        <hr>
+        <div class="create-account" style="height: 40px;">
+            <router-link to="register" style="float: left;">注册账号 </router-link>
+            <router-link to="foget" style="float: right;">找回密码 </router-link>
+        </div>
+    </i-form>
 </template>
 
 <script>
-
 export default {
     data() {
         return {

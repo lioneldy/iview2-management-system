@@ -61,6 +61,10 @@ export default new Router({
                 {
                     path: '/foget',
                     component: resolve => require(['../components/page/login-foget.vue'], resolve),
+                },
+                {
+                    path: '/security-question',
+                    component: resolve => require(['../components/page/security-question.vue'], resolve),
                 }
             ]
         },
