@@ -34,8 +34,8 @@ h1, p {
         </Form-item>
         <hr>
         <div class="create-account" style="height: 40px;">
-            <router-link to="register" style="float: left;">注册账号 </router-link>
-            <router-link to="foget" style="float: right;">找回密码 </router-link>
+            <router-link to="register" style="float: left; font-size: 14px;">注册账号 </router-link>
+            <router-link to="foget" style="float: right; font-size: 14px;">找回密码 </router-link>
         </div>
     </i-form>
 </template>

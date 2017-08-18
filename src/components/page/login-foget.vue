@@ -9,7 +9,7 @@ h1, p {
         <Form-item>
             <h1>短信认证</h1>
         </Form-item>
-        <p> 已有账号，请<router-link to="login">登录</router-link></p>
+        <p style="font-size: 14px;"> 已有账号，请<router-link to="login">登录</router-link></p>
         <Form-item prop="tel">
             <Input type="text" v-model="formInline.tel" placeholder="请输入手机号">
                 <Icon type="android-call" slot="prepend"></Icon>
@@ -23,7 +23,7 @@ h1, p {
             </Input>
         </Form-item>
         <Form-item>
-            <label style="float: right;">
+            <label style="float: right; font-size: 14px;">
             通过<router-link to="security-question">密码保护</router-link>找回密码
             </label>
         </Form-item>

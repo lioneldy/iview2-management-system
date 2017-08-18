@@ -56,9 +56,9 @@
 <template>
     <div class="login">
         <div class="logo">
-            <a href="/login">
+            <router-link to="login">
                 <img src="../../assets/img/logo2.png">
-            </a>
+            </router-link>
         </div>
         <div class="content">
             <router-view></router-view>

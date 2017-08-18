@@ -9,7 +9,7 @@ h1, p {
         <Form-item>
             <h1>用户注册</h1>
         </Form-item>
-        <p> 已有账号，请<router-link to="login">登录</router-link></p>
+        <p style="font-size: 14px;"> 已有账号，请<router-link to="login">登录</router-link></p>
         <Form-item prop="user">
             <Input type="text" v-model="formInline.user" placeholder="请输入用户名称">
                 <Icon type="person" slot="prepend"></Icon>
