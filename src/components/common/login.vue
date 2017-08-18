@@ -1,8 +1,12 @@
 <style scoped>
 
 .login {
+  position: absolute;
+  width: 100%;
+  height: 100%;  
   background-color: #666 !important; 
   background: url(../../assets/img/login/login1.jpg);
+  background-size: 100% 100%;
 }
 
 .login .logo {
@@ -50,30 +54,27 @@
 </style>
 
 <template>
-<div class="login">
-    <div class="logo">
-        <a href="/login">
-            <img src="../../assets/img/logo2.png">
-        </a>
+    <div class="login">
+        <div class="logo">
+            <a href="/login">
+                <img src="../../assets/img/logo2.png">
+            </a>
+        </div>
+        <div class="content">
+            <router-view></router-view>
+        </div>
+        <div class="copyright">
+            <a href="http://www.cincc.cn" title="北京新方通信技术有限公司" target="_blank">北京新方通信技术有限公司</a>
+            <br/>Copyright &copy; 2010-2016 CINCC ALL Rights Reserved
+        </div>
     </div>
-    <div class="content">
-        <router-view></router-view>
-    </div>
-    <div class="copyright">
-        <a href="http://www.cincc.cn" title="北京新方通信技术有限公司" target="_blank">北京新方通信技术有限公司</a>
-        <br/>Copyright &copy; 2010-2016 CINCC ALL Rights Reserved
-    </div>
-</div>
-
 </template>
 
 <script>
-
 export default {
     data() {
             return {
             }
         },
 }
-
 </script>
