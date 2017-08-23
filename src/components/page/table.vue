@@ -68,13 +68,13 @@
             mockTableData1 (val) {
                 let data = [];
                 let url = "../../../static/data/data.json";
-                this.$http.get(url).then((response) => {
+                this.axios.get(url).then(function(response){
                     for (var i = 0; i < 10; i++) {
                         let tmp = (val - 1) * 10 + i;
-                        if (tmp >= response.body.result.length) {
+                        if (tmp >= response.data.result.length) {
                             break;
                         }
-                        data.push(response.body.result[tmp]);
+                    data.push(response.data.result[tmp]);
                     }
                 });
                 return data;

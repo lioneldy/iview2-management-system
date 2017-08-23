@@ -9,6 +9,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "axios": "^0.16.2",
     "highlightjs": "^9.8.0",
     "iview": "^2.0.0-rc.4",
     "markdown-it-editor": "^1.1.4",

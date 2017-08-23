@@ -80,19 +80,33 @@ export default {
             this.$router.push('/login');
         },
         getCode() {
-            this.$Message.success('成功发送验证码');
-            if (!this.timer) {
-                this.count = 60;
-                this.show = true;
-                this.timer = setInterval(() => {
-                  if (this.count > 0 && this.count <= 60) {
-                    this.count--;
-                  } else {
-                    this.show = false;
-                    clearInterval(this.timer);
-                    this.timer = null;
-                  }
-                }, 1000)
+            if (this.formInline.tel) {
+                let url = '/user/sendVerifyCode';
+                this.axios.post(url, {
+                    tel: this.formInline.tel,
+                    smsType: '0'
+                })
+                .then(function(response){
+                    this.$Message.success('成功发送验证码');
+                    if (!this.timer) {
+                        this.count = 60;
+                        this.show = true;
+                        this.timer = setInterval(() => {
+                          if (this.count > 0 && this.count <= 60) {
+                            this.count--;
+                          } else {
+                            this.show = false;
+                            clearInterval(this.timer);
+                            this.timer = null;
+                          }
+                        }, 1000)
+                    }
+                })
+                .catch(function(err){
+                    console.log(err);
+                });
+            } else {
+                this.$Message.error('手机号为空!');
             }
         }
     }
